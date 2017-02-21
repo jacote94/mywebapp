@@ -1,7 +1,7 @@
 <h1>Posts</h1>
 <ul>
 {% for post in object_list %}
-    <li>{{ post.title }} - {{ post.published }}</li>
+    <li><a href="{{ post.get_absolute_url }}">{{ post.title }} - {{ post.published }}</a></li>
 {% empty %}
     <li>No articles yet.</li>
 {% endfor %}
